@@ -1,21 +1,74 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .bg-main {
+        background-color: "#F6F4FC";
+    }
+}
+
+@layer components {
+    /*
+    * button
+    */
+    .button-base {
+        @apply bg-primary  hover:bg-primary-dark py-2 px-4 rounded-md
+        text-white font-semibold inline-flex items-center justify-center;
+    }
+
+    /*
+    * text input
+    */
+    .textinput-container {
+        @apply flex flex-col mb-4;
+    }
+    .textinput-base {
+        @apply py-2 px-2 border-2 text-sm font-medium rounded-md;
+    }
+
+    /*
+    * titles
+    */
+
+    .title-1 {
+        @apply font-bold text-3xl;
+    }
+    .title-2 {
+        @apply font-bold text-2xl;
+    }
+    .title-3 {
+        @apply font-bold text-lg;
+    }
+
+    /*
+    * subtitles
+    */
+    .subtitle-1 {
+        @apply font-medium text-2xl;
+    }
+    .subtitle-2 {
+        @apply font-medium text-lg;
+    }
+    .subtitle-3 {
+        @apply font-medium text-base;
+    }
+
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+        Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
